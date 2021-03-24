@@ -25,5 +25,10 @@ class Venue
     false
   end
 
+  def kick_out
+    while patrons.count > 4
+      patrons.pop
+    end
+  end
 
 end
