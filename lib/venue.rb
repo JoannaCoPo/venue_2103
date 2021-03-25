@@ -20,13 +20,13 @@ class Venue
     end
   end
 
-  def over_capacity
-    return true if @patrons.count > 4
+  def over_capacity?
+    return true if patrons.count > capacity
     false
   end
 
   def kick_out
-    while patrons.count > 4
+    while patrons.count > capacity
       patrons.pop
     end
   end
